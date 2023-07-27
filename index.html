@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tag Durumu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin: 10px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .tag-sahibi {
+            color: #008000;
+            font-weight: bold;
+        }
+        .not-tag-sahibi {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tag Durumu</h1>
+        <p>Kullanıcı Adı: {{ isminiz }}</p>
+        {% if tag_sahibi %}
+            <p class="tag-sahibi">Tag Sahibi: Evet</p>
+        {% else %}
+            <p class="not-tag-sahibi">Tag Sahibi: Hayır</p>
+        {% endif %}
+    </div>
+</body>
+</html>
